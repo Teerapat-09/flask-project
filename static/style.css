@@ -1,54 +1,82 @@
 body {
     margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #ffe4ec, #ffffff);
-    color: #444;
+    padding: 0;
+    font-family: 'Sarabun', sans-serif;
+
+    /* พื้นหลังลายความรักแบบจาง ๆ */
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,192,203,.25) 2px, transparent 3px),
+    radial-gradient(circle at 80% 40%, rgba(255,105,135,.20) 2px, transparent 3px),
+    radial-gradient(circle at 40% 80%, rgba(255,182,193,.25) 2px, transparent 3px),
+    linear-gradient(#fff5f7,#ffeef3);
+
+    background-size: 120px 120px, 150px 150px, 180px 180px, cover;
 }
 
-/* หัวเว็บ */
-.hero {
-    text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #ff6fa1, #ff3d6e);
-    color: white;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-}
-
-.hero h1 {
-    font-size: 48px;
+/* หัวข้อใหญ่ */
+h1 {
+    font-family: 'Mitr', sans-serif;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
-.hero p {
-    font-size: 20px;
-    opacity: 0.9;
+/* หัวข้อรอง */
+h2 {
+    font-family: 'Mitr', sans-serif;
 }
 
-/* การ์ดข้อมูล */
+/* ส่วนหัว */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* กล่องเนื้อหา */
 .card {
     background: white;
-    margin: 30px auto;
-    padding: 25px;
     width: 80%;
     max-width: 700px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(255, 80, 120, 0.15);
-    transition: 0.3s;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(255,105,135,.15);
+    transition: transform .3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(255, 80, 120, 0.25);
 }
 
-h2 {
-    color: #ff3d6e;
+/* เอฟเฟกต์หัวใจ */
+.love-title {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform .25s ease;
 }
 
-/* ฟุตเตอร์ */
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #888;
+.love-title:hover {
+    transform: scale(1.05);
+}
+
+.love-title::after {
+    content: "❤";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+    color: #ff4d6d;
+    transition: all .35s ease;
+}
+
+.love-title:hover::after {
+    transform: translateY(-50%) scale(1.2);
+    opacity: 1;
+    animation: floatHeart .8s ease infinite alternate;
+}
+
+@keyframes floatHeart {
+    from { transform: translateY(-50%) translateX(0) scale(1.2); }
+    to { transform: translateY(-65%) translateX(-3px) scale(1.35); }
 }
