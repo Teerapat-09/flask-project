@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #ffffff);
+    color: #444;
+}
+
+/* หัวเว็บ */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #ff6fa1, #ff3d6e);
+    color: white;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* การ์ดข้อมูล */
+.card {
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255, 80, 120, 0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 80, 120, 0.25);
+}
+
+h2 {
+    color: #ff3d6e;
+}
+
+/* ฟุตเตอร์ */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
